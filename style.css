@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: url("assets/pine-wood-texture.jpg");
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+#flip-card {
+  background-color: transparent;
+  width: 600px;
+  height: 500px;
+  perspective: 1000px;
+  margin: 10%;
+}
+
+#flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#flip-card-front,
+#flip-card-back {
+  position: absolute;
+  width: 600px;
+  height: 500px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+#flip-card-front {
+  background-color: #c8c8c8;
+  color: black;
+}
+
+#flip-card-back {
+  color: white;
+  transform: rotateY(180deg);
+  background-color: white;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+#letter {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #607b8b;
+  background-position: right;
+  background-repeat: no-repeat;
+  border-radius: 1px;
+  padding: 10px;
+}
+
+#envelope {
+  position: absolute;
+  height: 500px;
+  width: 600px;
+
+  top: 0;
+  left: 0;
+
+  border-top: 200px solid transparent;
+  border-right: 200px solid #bebebe;
+  border-left: 200px solid #bebebe;
+  border-bottom: 300px solid #b0b0b0;
+
+  z-index: 3;
+}
+
+.lid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  border-right: 200px solid transparent;
+  border-bottom: 200px solid transparent;
+  border-left: 200px solid transparent;
+  transform-origin: top;
+}
+
+#one {
+  border-top: 200px solid #a8a8a8;
+  transform: rotateX(0deg);
+  z-index: 3;
+}
+
+#two {
+  border-top: 200px solid white;
+  transform: rotateX(90deg);
+  z-index: 1;
+}
+
+#stamp {
+  position: absolute;
+  top: 10px;
+  flex: 0;
+}
+
+#stamp img {
+  float: right;
+  width: 35%;
+}
+
+#Name {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 35%;
+  color: white;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+#companyName {
+  position: absolute;
+  top: -95%;
+  text-align: center;
+
+  color: white;
+  font-weight: 800;
+  left: 30%;
+  right: 30%;
+}
+
+#message {
+  position: absolute;
+  top: 10%;
+  color: white;
+  margin: 10px 20px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+#popUp {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  background-color: #555;
+  z-index: 1;
+  display: none;
+}
+
+#RSVP {
+  text-align: center;
+  color: white;
+  font-size: 12;
+  font-family: sans-serif;
+  padding: 15px;
+}
